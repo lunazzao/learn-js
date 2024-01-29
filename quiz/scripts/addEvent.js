@@ -6,13 +6,15 @@ window.onload = function() {
 }
 
 function myFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return () => document.getElementById('demo').textContent = msg;
 }
 
 function mySecondFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+     return () => document.getElementById('demo').textContent = msg;
 }
 
 function myThirdFunction(msg) {
-    document.getElementById('demo').textContent = msg;
+    return () => document.getElementById('demo').textContent = msg;
 }
+
+// closure: function body with surrounding scope(?)
